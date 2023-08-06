@@ -182,6 +182,122 @@ body .footer .text {
 </head>
 
 <body class="normal">
+    <div>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+            @keyframes showChat {
+                0% {
+                    width: 0;
+                    height: 0;
+                }
+            }
+
+            .chat-showing {
+                position: fixed;
+                right: .5rem;
+                bottom: .5rem;
+                width: 20rem;
+                height: 30rem;
+                animation: showChat .2s;
+                cursor: pointer;
+                box-shadow: 10px 10px 15px -4px rgba(0,0,0,0.32);
+            }
+            .chat {
+                width: 20rem;
+                height: 30rem;
+                border-radius: .5rem;
+            }
+
+            .chat-not-showing {
+                width: 0;
+                height: 0;
+                display: none
+            }
+
+            .button-showing {
+                width: 2rem;
+                height: 2rem;
+                background-color: rgb(82, 146, 255);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                border-radius: 500rem;
+                position: fixed;
+                right: 1rem;
+                bottom: 1rem;
+                transition: .2s;
+                box-shadow: 10px 10px 15px -4px rgba(0,0,0,0.32);
+                cursor: pointer;
+            }
+
+            .button-showing i {
+                color: white;
+                font-size: 20pt
+            }
+
+            .button-showing:hover {
+                background-color: blue;
+                transition: .5s;
+            }
+
+            .button-not-showing {
+               
+                display: none
+            }
+
+            .button-close {
+                cursor: pointer;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .3rem;
+                border-radius: 500rem;
+                left: -2rem;
+                color: white;
+                z-index: 999;
+                background-color: rgb(82, 146, 255) ;
+            }
+            .button-close:hover {
+                background-color: blue;
+                transition: .3s;
+            }
+            .unshow{
+                transition: .3s;
+                display: none
+            }
+        </style>
+
+        <div id="chat" class="unshow">
+            <div id="button-close" class="button-close" onClick="showButton()">
+                <i class='bx bx-x-circle'></i>
+            </div>
+            <iframe class="chat"
+                src="https://atendimento.cattalk.com.br/externalchat?connectionId=9b95cfae-7b6b-4f6b-876b-0b6fbe009d6c&name=Teste de Site Izaias&textTitle=Chat"
+                frameborder="0">
+            </iframe>
+        </div>
+        <div id="button-show" class="button-showing" onClick="showButton()">
+            <i class='bx bxs-message'></i>
+        </div>
+
+        <script>
+            function showButton() {
+                var button = document.querySelector('#button-show');
+                var chat = document.querySelector('#chat');
+                var value = chat.classList.value
+                if (value === 'unshow') {
+                    chat.classList.replace('unshow', 'chat-showing');
+                    button.classList.replace('button-showing', 'unshow');
+                } else {
+                    chat.classList.replace('chat-showing', 'unshow');
+                    button.classList.replace('unshow', 'button-showing');
+                }
+            }
+        </script>
+    </div>
     <div class="button">
 
     </div>
