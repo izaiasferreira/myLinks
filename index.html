@@ -12,269 +12,189 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
-.normal {
-    --main-color: rgb(253, 253, 253);
-    --main-color-hover: rgb(227, 227, 227);
-    --secoundary-color: #2a63ff;
-    --secoundary-color-hover: #0043ff;
-    --tertiary-color: #1af2dd;
-    --tertiary-color-hover: #65fff0;
-    --main-text-color: rgb(78, 78, 78);
-    --secoundary-text-color: rgb(255, 255, 255);
-}
+        .normal {
+            --main-color: rgb(253, 253, 253);
+            --main-color-hover: rgb(227, 227, 227);
+            --secoundary-color: #2a63ff;
+            --secoundary-color-hover: #0043ff;
+            --tertiary-color: #1af2dd;
+            --tertiary-color-hover: #65fff0;
+            --main-text-color: rgb(78, 78, 78);
+            --secoundary-text-color: rgb(255, 255, 255);
+        }
 
-.dark {
-    --main-color: rgb(0, 0, 0);
-    --main-color-hover: rgb(21, 21, 21);
-    --secoundary-color: #2a63ff;
-    --secoundary-color-hover: #0043ff;
-    --tertiary-color: #1af2dd;
-    --tertiary-color-hover: #65fff0;
-    --main-text-color: rgb(255, 255, 255);
-    --secoundary-text-color: rgb(255, 255, 255);
-}
+        .dark {
+            --main-color: rgb(0, 0, 0);
+            --main-color-hover: rgb(21, 21, 21);
+            --secoundary-color: #2a63ff;
+            --secoundary-color-hover: #0043ff;
+            --tertiary-color: #1af2dd;
+            --tertiary-color-hover: #65fff0;
+            --main-text-color: rgb(255, 255, 255);
+            --secoundary-text-color: rgb(255, 255, 255);
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'poppins';
-}
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins';
+        }
 
-a {
-    text-decoration: none;
-}
+        a {
+            text-decoration: none;
+        }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-body .back {
-    position: fixed;
-    top: 0;
-    z-index: 0;
-    width: 100%;
-    height: 15vh;
-    object-fit: cover;
-}
-body .back img{
-    position: fixed;
-    top: 0;
-    z-index: 0;
-    width: 101%;
-    height: 15vh;
-    object-fit: cover;
+        body .back {
+            position: fixed;
+            top: 0;
+            z-index: 0;
+            width: 100%;
+            height: 15vh;
+            object-fit: cover;
+        }
 
-}
+        body .back img {
+            position: fixed;
+            top: 0;
+            z-index: 0;
+            width: 101%;
+            height: 15vh;
+            object-fit: cover;
 
-body .content {
-    position: relative;
-    z-index: 1;
-    max-width: 27rem;
-    height: 100%;
-    width: 100%;
-}
+        }
 
-body .content .head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem;
-}
+        body .content {
+            position: relative;
+            z-index: 1;
+            max-width: 27rem;
+            height: 100%;
+            width: 100%;
+        }
 
-body .content .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-    width: 100%;
-}
+        body .content .head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+        }
 
-body .content .head .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+        body .content .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            width: 100%;
+        }
 
-body .content .head .text .title {
-    font-size: 12pt;
-    font-weight: 400;
-    color: var(--secoundary-text-color);
-}
+        body .content .head .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-body .content .head .text .name {
-    font-size: 20pt;
-    font-weight: 600;
-    color: var(--main-text-color);
-}
+        body .content .head .text .title {
+            font-size: 12pt;
+            font-weight: 400;
+            color: var(--secoundary-text-color);
+        }
 
-body .content .head .text .title {
-    font-size: 10pt;
-    font-weight: 400;
-    color: var(--main-text-color);
-}
+        body .content .head .text .name {
+            font-size: 20pt;
+            font-weight: 600;
+            color: var(--main-text-color);
+        }
 
-body .content .head .img img {
-    width: 10rem;
-    border-radius: 100%;
-}
+        body .content .head .text .title {
+            font-size: 10pt;
+            font-weight: 400;
+            color: var(--main-text-color);
+        }
 
-body .content .links a {
-    min-width: 15rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    margin: .5rem;
-    border-radius: .5rem;
-    background-color: var(--secoundary-color);
-    color: var(--secoundary-text-color);
-}
+        body .content .head .img img {
+            width: 10rem;
+            border-radius: 100%;
+        }
 
-body .content .links a:hover>.left {
-    transition: .3s;
-}
+        body .content .links a {
+            min-width: 15rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            margin: .5rem;
+            border-radius: .5rem;
+            background-color: var(--secoundary-color);
+            color: var(--secoundary-text-color);
+        }
 
-body .content .links a:hover {
-    background-color: var(--secoundary-color-hover);
-}
+        body .content .links a:hover>.left {
+            transition: .3s;
+        }
 
-body .content .links a .left {
-    min-width: 15rem;
-    display: flex;
-    align-items: center;
-    color: var(--secoundary-text-color);
-}
+        body .content .links a:hover {
+            background-color: var(--secoundary-color-hover);
+        }
 
-body .content .links a i {
-    font-size: 25pt;
-    margin-right: .5rem;
-}
+        body .content .links a .left {
+            min-width: 15rem;
+            display: flex;
+            align-items: center;
+            color: var(--secoundary-text-color);
+        }
 
-body .content .links a .title {
-    font-size: 13pt;
-    font-weight: 500;
-}
+        body .content .links a i {
+            font-size: 25pt;
+            margin-right: .5rem;
+        }
 
-body .footer {
-    padding: 1rem;
-}
+        body .content .links a .title {
+            font-size: 13pt;
+            font-weight: 500;
+        }
 
-body .footer .text {
-    font-size: 10pt;
-    font-weight: 400;
-    color: var(--main-text-color);
-}
-        </style>
+        body .footer {
+            padding: 1rem;
+        }
+
+        body .footer .text {
+            font-size: 10pt;
+            font-weight: 400;
+            color: var(--main-text-color);
+        }
+    </style>
 </head>
 
 <body class="normal">
-    <div>
+    <div class="cattalk-external-chat-container">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <style>
-            @keyframes showChat {
-                0% {
-                    width: 0;
-                    height: 0;
-                }
-            }
+        <link href='https://atendimento.cattalk.com.br/externalChatFiles/style.css' rel='stylesheet'>
 
-            .chat-showing {
-                position: fixed;
-                right: .5rem;
-                bottom: .5rem;
-                width: 20rem;
-                height: 30rem;
-                animation: showChat .2s;
-                cursor: pointer;
-                box-shadow: 10px 10px 15px -4px rgba(0,0,0,0.32);
-            }
-            .chat {
-                width: 20rem;
-                height: 30rem;
-                border-radius: .5rem;
-            }
-
-            .chat-not-showing {
-                width: 0;
-                height: 0;
-                display: none
-            }
-
-            .button-showing {
-                width: 2rem;
-                height: 2rem;
-                background-color: rgb(82, 146, 255);
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 1rem;
-                border-radius: 500rem;
-                position: fixed;
-                right: 1rem;
-                bottom: 1rem;
-                transition: .2s;
-                box-shadow: 10px 10px 15px -4px rgba(0,0,0,0.32);
-                cursor: pointer;
-            }
-
-            .button-showing i {
-                color: white;
-                font-size: 20pt
-            }
-
-            .button-showing:hover {
-                background-color: blue;
-                transition: .5s;
-            }
-
-            .button-not-showing {
-               
-                display: none
-            }
-
-            .button-close {
-                cursor: pointer;
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: .3rem;
-                border-radius: 500rem;
-                left: -2rem;
-                color: white;
-                z-index: 999;
-                background-color: rgb(82, 146, 255) ;
-            }
-            .button-close:hover {
-                background-color: blue;
-                transition: .3s;
-            }
-            .unshow{
-                transition: .3s;
-                display: none
-            }
-        </style>
-
-        <!--Chat abaixo -->
-      
-<!--Chat acima -->
-    <div class="button">
-
+        <div id="cattalk-external-chat-content" class="cattalk-external-chat-unshow">
+            <iframe class="cattalk-external-chat"
+                src="https://atendimento.cattalk.com.br/externalchat?connectionId=5c4460b9-236a-4108-bcf5-55dd4444c96c&name=Conexão Izaias&textTitle=Chat"
+                frameborder="0">
+            </iframe>
+        </div>
+        <script src="https://atendimento.cattalk.com.br/externalChatFiles/script.js"></script>
     </div>
+    
     <div class="content">
         <div class="head">
             <div class="img">
