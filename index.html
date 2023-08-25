@@ -269,34 +269,20 @@ body .footer .text {
             }
         </style>
 
-        <div id="chat" class="unshow">
-            <div id="button-close" class="button-close" onClick="showButton()">
-                <i class='bx bx-x-circle'></i>
-            </div>
-            <iframe class="chat"
-                src="https://atendimento.cattalk.com.br/externalchat?connectionId=9b95cfae-7b6b-4f6b-876b-0b6fbe009d6c&name=Teste de Site Izaias&textTitle=Chat"
-                frameborder="0">
-            </iframe>
-        </div>
-        <div id="button-show" class="button-showing" onClick="showButton()">
-            <i class='bx bxs-message'></i>
-        </div>
+        <!--Chat abaixo -->
+        <div class="cattalk-external-chat-container">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://atendimento.cattalk.com.br/externalChatFiles/style.css' rel='stylesheet'>
 
-        <script>
-            function showButton() {
-                var button = document.querySelector('#button-show');
-                var chat = document.querySelector('#chat');
-                var value = chat.classList.value
-                if (value === 'unshow') {
-                    chat.classList.replace('unshow', 'chat-showing');
-                    button.classList.replace('button-showing', 'unshow');
-                } else {
-                    chat.classList.replace('chat-showing', 'unshow');
-                    button.classList.replace('unshow', 'button-showing');
-                }
-            }
-        </script>
+    <div id="cattalk-external-chat-content" class="cattalk-external-chat-unshow">
+        <iframe class="cattalk-external-chat"
+            src="https://atendimento.cattalk.com.br/externalchat?connectionId=5c4460b9-236a-4108-bcf5-55dd4444c96c&name=Conexão Izaias&textTitle=Chat"
+            frameborder="0">
+        </iframe>
     </div>
+    <script src="https://atendimento.cattalk.com.br/externalChatFiles/script.js"></script>
+</div>
+<!--Chat acima -->
     <div class="button">
 
     </div>
